@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<!--可以覆盖标准mui的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style type="text/css">
+			.rule {
+				width: 75%;
+				margin: 20px auto;
+			}
+			
+			.rule a {
+				margin-left: 25px;
+			}
+			
+			.mui-input-row {
+				line-height: 40px;
+				padding-right: 30px;
+			}
+			
+			.mui-input-row .input-cont {
+				float: left;
+				width: 50%;
+				text-align: right;
+			}
+			
+			.mui-input-row span {
+				float: right;
+			}
+			
+			.title-pay {
+				margin: 30px 0 10px 10px;
+			}
+			
+			.input-pay {
+				padding: 0 20px;
+				line-height: 42px;
+			}
+			
+			.pay-type {
+				position: relative;
+				height: 40px;
+				float: right;
+				line-height: 40px;
+			}
+			
+			.img-QQ {
+				width: 28px;
+				position: absolute;
+				left: -45px;
+				top: 5px;
+			}
+			
+			.img-WEIXIN {
+				position: absolute;
+				left: -35px;
+				top: 5px;
+			}
+			
+			.btn-submit {
+				width: 100%;
+				margin-top: 50px;
+				text-align: center;
+			}
+			
+			.btn-submit button {
+				padding: 15px 45px;
+				margin-bottom: 15px;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 主界面不动、菜单移动 -->
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a href="" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#000;"></a>
+					<h1 class="mui-title">充值返现</h1>
+				</header>
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<p class="rule">华汽维修连锁，重置立获返现，返现金额可提现到指定账户
+							<a href="#">查看更多返现规则</a>
+						</p>
+						<form class="mui-input-group">
+							<div class="mui-input-row">
+								<label>充值</label>
+								<input class="input-cont" maxlength="10" type="text" name="" value="" placeholder="请输入充值金额" />
+								<span>元</span>
+							</div>
+							<div class="mui-input-row">
+								<label>返现</label>
+								<input class="input-cont" maxlength="10" type="text" name="" value="" />
+								<span>元</span>
+							</div>
+						</form>
+						<h5 class="title-pay">支付方式</h5>
+						<form class="mui-input-group">
+							<!--<div class="mui-input-row input-pay">
+								<input type="radio" name="pay-choose" id="" value="" />
+								<div class="pay-type">
+									<img class="img-QQ" src="images/qq.png" />
+									<span>QQ支付</span>
+								</div>
+							</div>
+							<div class="mui-input-row input-pay">
+								<input type="radio" name="pay-choose" id="" value="" />
+								<div class="pay-type">
+									<img class="img-WEIXIN" src="images/weixin.png" />
+									<span>微信支付</span>
+								</div>
+							</div>-->
+							<div class="mui-input-row mui-radio">
+								<label>支付宝</label>
+								<input name="radio1" type="radio">
+							</div>
+							
+							<div class="mui-input-row mui-radio">
+								<label>微信</label>
+								<input name="radio1" type="radio" checked>
+								
+							</div>
+						</form>
+						<div class="btn-submit">
+							<button>确定</button>
+							<p>
+								<input type="radio" name="" id="" value="" /> 我已阅读并同意
+								<a href="#">《华汽维修连锁充值返现协议》</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui('.mui-scroll-wrapper').scroll({
+				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+			});
+		</script>
+	</body>
+
+</html>

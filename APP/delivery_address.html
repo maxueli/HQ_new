@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<!--可以覆盖标准mui的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		 <a href="" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#000;"></a>
+		  <button class="mui-btn mui-btn-link mui-btn-nav mui-pull-right" id="add_address">
+		 	 新增地址
+		    <span class="mui-icon mui-icon-right-nav"></span>
+		  </button>
+		  <h1 class="mui-title">收货地址</h1>
+		</header>
+		<div class="mui-content">
+		    <ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h5>刘大哥：15856585856</h5>
+		                    <p class="mui-h6 mui-ellipsis-2">江苏省南京市栖霞区仙林大道99889号仙隐北路口仙鹤雅居109栋一层华汽车维修中心</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                     <button class="mui-btn" style="margin-top: 15px;" id="edit">编辑</button>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h5>刘大哥：15856585856</h5>
+		                    <p class="mui-h6 mui-ellipsis-2">江苏省南京市栖霞区仙林大道99889号仙隐北路口仙鹤雅居109栋一层华汽车维修中心</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                     <button class="mui-btn" style="margin-top: 15px;">编辑</button>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h5>刘大哥：15856585856</h5>
+		                    <p class="mui-h6 mui-ellipsis-2">江苏省南京市栖霞区仙林大道99889号仙隐北路口仙鹤雅居109栋一层华汽车维修中心</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                     <button class="mui-btn" style="margin-top: 15px;">编辑</button>
+		                </div>
+		            </div>
+		        </li>
+		    </ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			document.getElementById('add_address').addEventListener('tap', function() {
+			  //打开物流页面
+			  mui.openWindow({
+			    url: 'add_address.html', 
+			    id:'add_address',
+			    show:{
+			      aniShow: 'pop-in'
+			    }
+			  });
+			});
+			//打开编辑
+			document.getElementById('edit').addEventListener('tap', function() {
+			  
+			  mui.openWindow({
+			    url: 'add_address.html', 
+			    id:'add_address',
+			    show:{
+			      aniShow: 'pop-in'
+			    }
+			  });
+			});
+		</script>	
+	</body>
+</html>

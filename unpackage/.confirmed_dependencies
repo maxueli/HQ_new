@@ -1,0 +1,56 @@
+{
+	"index.html": {
+		"resources": [
+			"js/app.js",
+			"fonts/iconfont.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"css/icons-extra.css"
+		],
+		"refer": [
+			"APP/purchase.html"
+		]
+	},
+	"APP/purchase.html": {
+		"resources": [
+			"css/app.css",
+			"css/mui.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"APP/purchase_detail.html"
+		]
+	},
+	"APP/purchase_detail.html": {
+		"resources": [
+			"js/jquery-2.1.0.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.css"
+		],
+		"refer": [
+			"APP/goods.html",
+			"APP/shop_cart.html"
+		]
+	},
+	"APP/goods.html": {
+		"resources": [
+			"js/mui.lazyload.js",
+			"js/mui.lazyload.img.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/jquery-2.1.0.js",
+			"css/icons-extra.css"
+		],
+		"refer": [
+			"APP/goods_detail.html",
+			"APP/shop_cart.html"
+		]
+	}
+}

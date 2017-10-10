@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<!--可以覆盖标准mui的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.price{
+				color:#FF7B25;
+				font-size: 16px;
+			}
+			.mui-table .mui-media-object{
+			    max-width: 80px;
+			    height: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#000;"></a>
+			<h1 class="mui-title">结算</h1>
+		</header>
+		<div class="mui-content" style="background: #fff;padding-bottom: 50px;">
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		            	<div class="mui-table-cell mui-col-xs-3 mui-pull-left">
+		            		<img class="mui-media-object " src="http://placehold.it/240X240">
+		            	</div>
+		                <div class="mui-table-cell mui-col-xs-6 mui-pull-left">
+		                    <h5 class="mui-ellipsis" style="line-height: 20px;">BMPMIC机油</h5>
+		                    <h5>型号：BACB11-247001</h5>
+		                    <h5>规格：12个*1箱</h5>
+		                   
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-3 mui-pull-left">
+		                     <p class="mui-ellipsis mui-text-center price">￥99.80</p>
+		                    <p class="mui-ellipsis mui-text-center"><s>¥199</s></p>
+		                    <p class="mui-ellipsis mui-text-center">数量：x1</p>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		            	<div class="mui-table-cell mui-col-xs-3 mui-pull-left">
+		            		<img class="mui-media-object " src="http://placehold.it/240X240">
+		            	</div>
+		                <div class="mui-table-cell mui-col-xs-6 mui-pull-left">
+		                    <h5 class="mui-ellipsis" style="line-height: 20px;">BMPMIC机油</h5>
+		                    <h5>型号：BACB11-247001</h5>
+		                    <h5>规格：12个*1箱</h5>
+		                   
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-3 mui-pull-left">
+		                    <p class="mui-ellipsis mui-text-center price">￥99.80</p>
+		                    <p class="mui-ellipsis mui-text-center"><s>¥199</s></p>
+		                    <p class="mui-ellipsis mui-text-center">数量：x1</p>
+		                </div>
+		            </div>
+		        </li>
+		       
+		    </ul>
+		    <div class="order-footer mui-clearfix" style="padding: 5px;">
+				<p>收货地址：江苏省南京市栖霞区仙林大道99889号仙隐北路口仙鹤雅居109栋一层华汽车维修中心</p>
+				<p>联系人：张大哥</p>
+				<p class="iphone">联系电话:18856588658</p>
+				<button class="mui-btn mui-pull-right" style="margin: 0px 5px;" id="address">其他地址</button>
+			</div>
+			
+			
+			<div class="">
+				<p style="margin-left: 10px;">支付方式：</p>
+				<form class="mui-input-group">
+					<div class="mui-input-row mui-radio">
+						
+						<label>余额</label>
+						<input name="radio1" type="radio">
+					</div>
+					<div class="mui-input-row mui-radio">
+						<label>支付宝</label>
+						<input name="radio1" type="radio">
+					</div>
+					
+					<div class="mui-input-row mui-radio">
+						<label>微信</label>
+						<input name="radio1" type="radio" checked>
+						
+					</div>
+				</form>
+			</div>
+			<p style="margin-left: 10px;">其他费用：</p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">物流费 <span class="mui-pull-right">¥14</span>
+				</li>
+			</ul>
+			
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		  <a class="mui-tab-item mui-active" href="#">
+		   （合计¥789）确认支付
+		  </a>
+		</nav>
+		
+
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			document.getElementById('address').addEventListener('tap', function() {
+			  //打开物流页面
+			  mui.openWindow({
+			    url: 'delivery_address.html', 
+			    id:'delivery_address',
+			    show:{
+			      aniShow: 'pop-in'
+			    }
+			  });
+			});  
+//			var info = document.getElementById("info");
+//				document.querySelector('.mui-table-view.mui-table-view-radio').addEventListener('selected',function(e){
+//					info.innerHTML = "当前选中的为："+e.detail.el.innerText;
+//				});
+		</script>
+	</body>
+</html>
